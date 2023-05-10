@@ -10,6 +10,7 @@ class Cow(models.Model):
 
 
 class Vaccine(models.Model):
+    cow_Id = models.ForeignKey(Cow, on_delete=models.CASCADE)
     trikofiti_status_1D = models.BooleanField(blank=True, null=True)
     trikofiti_status_14D = models.BooleanField(blank=True, null=True)
     brd_clostridial_status_17D = models.BooleanField(blank=True, null=True)
